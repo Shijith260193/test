@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "NodeJs email form to send email using nodejs",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "nodemailer": "~0.7.0",
