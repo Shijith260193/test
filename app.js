@@ -21,14 +21,16 @@ if(req.body.email == "" || req.body.subject == "") {
   return false;
 }
 // with SMTP
-    var smtpTransport = nodemailer.createTransport("SMTP",{
-             host: "smtp.gmail.com", // hostname
-    secureConnection: true, // use SSL
-    port: 465, // port for secure SMTP
-            auth: {
-                 user: "shijiththomas2@gmail.com",
-                 pass: "shjthgmail:/.>pass"
-            }
+        var smtpTransport = nodemailer.createTransport("SMTP",{
+        host: "smtp.gmail.com",
+        secureConnection: false,
+        port: 587,
+        requiresAuth: true,
+        domains: ["gmail.com", "googlemail.com"],
+        auth: {
+        user: "shijiththomas2@gmail.com",
+        pass: "shjthgmail:/.>pass"
+        }
         });
         var mailOptions = {
             from: "Node Emailer ✔ <shijiththomas2@gmail.com>", // sender address
